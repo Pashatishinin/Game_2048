@@ -33,7 +33,7 @@ body {
 #game-container {
     position: relative;
     width: 420px;
-    background-color: #f9f8f8;
+    background-color: #161419;;
 }
 
 .game-info {
@@ -126,17 +126,17 @@ i {
 
 }
 
-.tile-2{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-4{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-8{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-16{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-32{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-64{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-128{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-256{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-512{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-1024{background-color: #ffcdd2; animation: pop 0.2s linear;}
-.tile-2048{background-color: #ffcdd2; animation: pop 0.2s linear;}
+.tile-2{background-color: #eee4da; animation: pop 0.2s linear}
+.tile-4{background-color: #eee1c9; animation: pop 0.2s linear}
+.tile-8{background-color: #f3b27a; animation: pop 0.2s linear}
+.tile-16{background-color: #f69664; animation: pop 0.2s linear}
+.tile-32{background-color: #f77c5f; animation: pop 0.2s linear}
+.tile-64{background-color: #f75f3b; animation: pop 0.2s linear}
+.tile-128{background-color: #edd073; animation: pop 0.2s linear}
+.tile-256{background-color: #edcc62; animation: pop 0.2s linear}
+.tile-512{background-color: #edc950; animation: pop 0.2s linear}
+.tile-1024{background-color: #edc53f; animation: pop 0.2s linear}
+.tile-2048{background-color: #edc22e; animation: pop 0.2s linear}
 
 #game-over {
     display: none;
@@ -179,22 +179,27 @@ i {
 
 @keyframes bounceIn {
     0% {
-        transform: scale(0.1);
-        opacity: 0;
+      transform: scale(0.1);
+      opacity: 0;
     }
-
     60% {
-        transform: scale(1.2);
-        opacity: 1;
+      transform: scale(1.2);
+      opacity: 1;
     }
-
     100% {
-        transform: scale(1);
+      transform: scale(1);
     }
-}
-
-@keyframes pop {
+  }
+  @keyframes pop {
     0% {
-        transform: scale(1);
+      transform: scale(1);
+      
     }
-}
+    60% {
+      transform: scale(.9);
+      
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
