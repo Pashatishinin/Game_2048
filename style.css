@@ -15,6 +15,9 @@ body {
     color: #f9f8f8;
     height: 100vh;
     overflow: hidden;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 #game-message {
@@ -23,7 +26,6 @@ body {
     display: flex;
     flex-direction: row;
     width: 250px;
-    margin-bottom: 15px;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 15px;
@@ -31,25 +33,33 @@ body {
 
 #game-container {
     position: relative;
-    width: 460px;
+    max-width: 460px;
     padding: 20px;
     background-color: #474747;
     border-radius: 10px;
+    flex: 1;
 }
 
 .game-info {
     color: #eee;
     padding: 15px;
     border: none;
-    display: flex;
-    flex-direction: column;
+    
     width: 300px;
     height: 55%;
     margin-left: 50px;
     justify-content: start;
     align-items: center;
     border-radius: 10px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
 }
+
+.info-top {
+    flex: 1;
+}
+
 
 .game-info button {
     border-radius: 5px;
@@ -58,7 +68,7 @@ body {
     margin: 10px;
     width: 90%;
     height: 40px;
-    background-color: #cc527a;
+    background-color: #f77c5f;
     color: #eee;
     font-weight: 600;
     letter-spacing: 2px;
@@ -67,18 +77,17 @@ body {
 }
 
 .game-info button:hover {
-    background-color: #E8175D ;
+    background-color: #f75f3b ;
 }
 
 .game-info h1 {
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 600;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .move {
-    width: 100%;
-    padding-top: 15px;
+    flex: 1;
 }
 
 .move h1 {
@@ -86,15 +95,22 @@ body {
 }
 
 i {
-    font-size: 45px;
+    font-size: 50px;
     margin: 5px;
-    transition: font-size 0.6s ease;
+    transition: background-color 0.6s ease;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: #f77c5f;
+    margin-bottom: 10px;
 
 }
 
 i:hover {
-    font-size: 50px;
+    background-color: #f75f3b;
 }
+
+
 
 
 #game-score, #game-time {
@@ -201,3 +217,10 @@ i:hover {
       transform: scale(1);
     }
   }
+
+
+@media (max-width: 800px) {
+    .info-top {
+        order: -1;
+    }
+}
